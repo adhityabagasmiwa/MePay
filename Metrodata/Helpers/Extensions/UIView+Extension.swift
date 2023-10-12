@@ -7,6 +7,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+
 extension UIView {
     private var loadingTag: Int { return 999 }
 
