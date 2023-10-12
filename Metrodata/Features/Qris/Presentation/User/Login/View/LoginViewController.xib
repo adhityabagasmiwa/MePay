@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-Bold.ttf">
+            <string>SofiaPro-Bold</string>
+        </array>
+        <array key="Sofia-Pro-Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Metrodata" customModuleProvider="target">
+            <connections>
+                <outlet property="emailTextField" destination="LEa-FW-9lv" id="eQW-Uc-f5i"/>
+                <outlet property="passwordView" destination="4ZN-KF-t0l" id="m9h-pB-NyE"/>
+                <outlet property="scrollView" destination="M97-1Q-ZMh" id="WLd-jL-Dof"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GkY-aO-Ysi" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="0.0" width="430" height="898"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M97-1Q-ZMh">
+                            <rect key="frame" x="0.0" y="0.0" width="430" height="898"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5WZ-t5-Dz2">
+                                    <rect key="frame" x="0.0" y="0.0" width="430" height="750.33333333333337"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSv-eo-hRm">
+                                            <rect key="frame" x="20" y="107" width="390" height="64"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MePayLogo" translatesAutoresizingMaskIntoConstraints="NO" id="b0L-Yt-xrg" userLabel="Image View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="64" id="DpV-ld-nBC"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="b0L-Yt-xrg" secondAttribute="trailing" id="5tT-nq-yNm"/>
+                                                <constraint firstItem="b0L-Yt-xrg" firstAttribute="leading" secondItem="BSv-eo-hRm" secondAttribute="leading" id="hhk-Py-1TI"/>
+                                                <constraint firstItem="b0L-Yt-xrg" firstAttribute="top" secondItem="BSv-eo-hRm" secondAttribute="top" id="jhm-Ok-4sD"/>
+                                                <constraint firstAttribute="bottom" secondItem="b0L-Yt-xrg" secondAttribute="bottom" id="u8t-6Q-QK7"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2YG-E8-nfB">
+                                            <rect key="frame" x="20" y="187" width="390" height="61.666666666666657"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0B-ps-tsG">
+                                                    <rect key="frame" x="165" y="0.0" width="60.333333333333343" height="34.333333333333336"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="24"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log into access your acount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upp-BI-4Ml">
+                                                    <rect key="frame" x="107.00000000000001" y="42.333333333333343" width="176.33333333333337" height="19.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="fmQ-Kk-8k0">
+                                            <rect key="frame" x="20" y="264.66666666666669" width="390" height="327.00000000000006"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sF7-X8-ADT" userLabel="Email View">
+                                                    <rect key="frame" x="0.0" y="24" width="390" height="75.666666666666671"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hkJ-xu-2BE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="75.666666666666671"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkB-ty-hrK">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="19.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEa-FW-9lv">
+                                                                    <rect key="frame" x="0.0" y="27.666666666666629" width="390" height="48"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="tintColor" name="AccentColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="48" id="RQL-s5-yeT"/>
+                                                                    </constraints>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                                </textField>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="hkJ-xu-2BE" firstAttribute="leading" secondItem="sF7-X8-ADT" secondAttribute="leading" id="7kK-Y9-ghc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="hkJ-xu-2BE" secondAttribute="trailing" id="R95-dM-LdQ"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hkJ-xu-2BE" secondAttribute="bottom" id="fRC-im-r1O"/>
+                                                        <constraint firstItem="hkJ-xu-2BE" firstAttribute="top" secondItem="sF7-X8-ADT" secondAttribute="top" id="riD-NT-ok5"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhB-eM-dSg" userLabel="Password View">
+                                                    <rect key="frame" x="0.0" y="115.66666666666664" width="390" height="211.33333333333337"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YiY-Fq-1p7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="211.33333333333334"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0W-Ko-gWJ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="155.33333333333334"/>
+                                                                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZN-KF-t0l">
+                                                                    <rect key="frame" x="0.0" y="163.33333333333331" width="390" height="48"/>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="48" id="1bg-Rg-aRd"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="YiY-Fq-1p7" firstAttribute="leading" secondItem="DhB-eM-dSg" secondAttribute="leading" id="Bz7-jN-V95"/>
+                                                        <constraint firstAttribute="bottom" secondItem="YiY-Fq-1p7" secondAttribute="bottom" id="IUw-o7-WrT"/>
+                                                        <constraint firstItem="YiY-Fq-1p7" firstAttribute="top" secondItem="DhB-eM-dSg" secondAttribute="top" id="eS6-Qu-tdn"/>
+                                                        <constraint firstAttribute="trailing" secondItem="YiY-Fq-1p7" secondAttribute="trailing" id="ut0-Na-mAk"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dgt-jw-Slt">
+                                            <rect key="frame" x="20" y="607.66666666666663" width="390" height="118.66666666666663"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vld-Sl-QVP" userLabel="Login Button">
+                                                    <rect key="frame" x="0.0" y="24" width="390" height="48"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="48" id="vwx-8i-Pcf"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Login" cornerStyle="capsule">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="backgroundColor" name="AccentColor"/>
+                                                        </backgroundConfiguration>
+                                                        <fontDescription key="titleFontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="18"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="onPressLoginButton:" destination="-1" eventType="touchUpInside" id="v1D-KJ-0yc"/>
+                                                    </connections>
+                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hg8-KQ-AXa">
+                                                    <rect key="frame" x="0.0" y="88" width="390" height="30.666666666666671"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Itr-ex-yL7">
+                                                            <rect key="frame" x="108" y="0.0" width="174" height="30.666666666666668"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New user?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7Q-bG-ihp">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="30.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="16"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px7-gN-04U" userLabel="Register Button">
+                                                                    <rect key="frame" x="79" y="0.0" width="95" height="30.666666666666668"/>
+                                                                    <color key="tintColor" name="AccentColor"/>
+                                                                    <state key="normal" title="Button"/>
+                                                                    <buttonConfiguration key="configuration" style="plain" title="Register now">
+                                                                        <fontDescription key="titleFontDescription" name="SofiaPro-SemiBold" family="Sofia Pro" pointSize="16"/>
+                                                                        <directionalEdgeInsets key="contentInsets" top="4" leading="0.0" bottom="4" trailing="0.0"/>
+                                                                    </buttonConfiguration>
+                                                                    <connections>
+                                                                        <action selector="onPressRegisterButton:" destination="-1" eventType="touchUpInside" id="xFE-mc-fLx"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                        </stackView>
+                                    </subviews>
+                                    <directionalEdgeInsets key="directionalLayoutMargins" top="48" leading="20" bottom="24" trailing="20"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="5WZ-t5-Dz2" firstAttribute="centerX" secondItem="M97-1Q-ZMh" secondAttribute="centerX" id="542-z5-F82"/>
+                                <constraint firstAttribute="trailing" secondItem="5WZ-t5-Dz2" secondAttribute="trailing" id="M92-eN-J3l"/>
+                                <constraint firstItem="5WZ-t5-Dz2" firstAttribute="top" secondItem="M97-1Q-ZMh" secondAttribute="top" id="Ndr-yT-OoL"/>
+                                <constraint firstAttribute="bottom" secondItem="5WZ-t5-Dz2" secondAttribute="bottom" id="fcQ-Ip-4fe"/>
+                                <constraint firstItem="5WZ-t5-Dz2" firstAttribute="leading" secondItem="M97-1Q-ZMh" secondAttribute="leading" id="rWc-S3-rbx"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="M97-1Q-ZMh" firstAttribute="top" secondItem="GkY-aO-Ysi" secondAttribute="top" id="8z8-rX-Hys"/>
+                        <constraint firstAttribute="bottom" secondItem="M97-1Q-ZMh" secondAttribute="bottom" id="9bW-bd-utS"/>
+                        <constraint firstItem="M97-1Q-ZMh" firstAttribute="leading" secondItem="GkY-aO-Ysi" secondAttribute="leading" id="DnZ-Jn-Tpv"/>
+                        <constraint firstAttribute="trailing" secondItem="M97-1Q-ZMh" secondAttribute="trailing" id="amE-mF-f0C"/>
+                        <constraint firstItem="M97-1Q-ZMh" firstAttribute="width" secondItem="GkY-aO-Ysi" secondAttribute="width" id="idt-aW-s5i"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GkY-aO-Ysi" secondAttribute="bottom" id="2jc-j6-Tch"/>
+                <constraint firstAttribute="trailing" secondItem="GkY-aO-Ysi" secondAttribute="trailing" id="3eP-qc-kIY"/>
+                <constraint firstItem="GkY-aO-Ysi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xwi-5A-p5W"/>
+                <constraint firstItem="GkY-aO-Ysi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="yhE-tz-gHP"/>
+            </constraints>
+            <point key="canvasLocation" x="94" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="MePayLogo" width="170" height="63"/>
+        <namedColor name="AccentColor">
+            <color red="0.27099999785423279" green="0.4309999942779541" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="TransactionCardTableViewCell" customModule="Metrodata" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgw-Pp-nAm" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="8" width="332" height="76"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7c8-bL-ffe">
+                                <rect key="frame" x="0.0" y="0.0" width="332" height="76"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68T-Ze-ZN7" userLabel="Logo View">
+                                        <rect key="frame" x="8" y="8" width="50" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.arrow.circlepath" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fnU-Wc-tMZ">
+                                                <rect key="frame" x="8" y="12.666666666666664" width="34" height="35"/>
+                                                <color key="tintColor" red="0.074509803921568626" green="0.78823529411764703" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="light"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.86274509803921573" green="0.96862745098039216" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="4Te-Wf-qtP"/>
+                                            <constraint firstItem="fnU-Wc-tMZ" firstAttribute="leading" secondItem="68T-Ze-ZN7" secondAttribute="leading" constant="8" id="5dt-0u-2Fm"/>
+                                            <constraint firstAttribute="trailing" secondItem="fnU-Wc-tMZ" secondAttribute="trailing" constant="8" id="AoW-Lo-uH3"/>
+                                            <constraint firstItem="fnU-Wc-tMZ" firstAttribute="top" secondItem="68T-Ze-ZN7" secondAttribute="top" constant="10" id="JPB-Tt-Ko2"/>
+                                            <constraint firstAttribute="width" constant="50" id="SnB-aO-0XN"/>
+                                            <constraint firstAttribute="bottom" secondItem="fnU-Wc-tMZ" secondAttribute="bottom" constant="10" id="g0j-y1-LYQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAA-sZ-r89" userLabel="Description View">
+                                        <rect key="frame" x="58" y="8" width="266" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KEh-e9-mim">
+                                                <rect key="frame" x="0.0" y="0.0" width="117.33333333333333" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Merchant Mock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMJ-c3-tTJ" userLabel="Receive Label">
+                                                        <rect key="frame" x="8" y="7.9999999999999982" width="101.33333333333333" height="19.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTg-GC-wkI" userLabel="Type Label">
+                                                        <rect key="frame" x="8" y="35.333333333333336" width="101.33333333333333" height="16.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="12"/>
+                                                        <color key="textColor" name="SubtitleColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                            </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89C-pW-GFI">
+                                                <rect key="frame" x="125.33333333333336" y="0.0" width="140.66666666666663" height="60"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Crs-2V-W4R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="140.66666666666666" height="60"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp.50.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWG-GW-iLG" userLabel="Nominal Label">
+                                                                <rect key="frame" x="66.333333333333314" y="7.9999999999999982" width="66.333333333333314" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Oktober 2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSt-Ea-I82" userLabel="Date Label">
+                                                                <rect key="frame" x="44.000000000000007" y="35.333333333333336" width="88.666666666666686" height="16.666666666666664"/>
+                                                                <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="12"/>
+                                                                <color key="textColor" name="SubtitleColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Crs-2V-W4R" secondAttribute="trailing" id="5Qy-O3-euU"/>
+                                                    <constraint firstItem="Crs-2V-W4R" firstAttribute="top" secondItem="89C-pW-GFI" secondAttribute="top" id="61r-Yf-dfa"/>
+                                                    <constraint firstItem="Crs-2V-W4R" firstAttribute="leading" secondItem="89C-pW-GFI" secondAttribute="leading" id="CCg-9o-myj"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Crs-2V-W4R" secondAttribute="bottom" id="eRo-mx-QjF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="89C-pW-GFI" firstAttribute="top" secondItem="WAA-sZ-r89" secondAttribute="top" id="Eeq-v5-0ot"/>
+                                            <constraint firstItem="89C-pW-GFI" firstAttribute="leading" secondItem="KEh-e9-mim" secondAttribute="trailing" constant="8" id="FFX-TD-Cvn"/>
+                                            <constraint firstItem="KEh-e9-mim" firstAttribute="top" secondItem="WAA-sZ-r89" secondAttribute="top" id="Lew-Uy-bV4"/>
+                                            <constraint firstAttribute="bottom" secondItem="KEh-e9-mim" secondAttribute="bottom" id="PKA-Wm-Lba"/>
+                                            <constraint firstAttribute="bottom" secondItem="89C-pW-GFI" secondAttribute="bottom" id="ne7-sJ-YFp"/>
+                                            <constraint firstItem="KEh-e9-mim" firstAttribute="leading" secondItem="WAA-sZ-r89" secondAttribute="leading" id="pCr-6X-qOH"/>
+                                            <constraint firstAttribute="trailing" secondItem="89C-pW-GFI" secondAttribute="trailing" id="qzH-xZ-mlJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7c8-bL-ffe" firstAttribute="leading" secondItem="pgw-Pp-nAm" secondAttribute="leading" id="GhP-hL-G8C"/>
+                            <constraint firstAttribute="bottom" secondItem="7c8-bL-ffe" secondAttribute="bottom" id="Me7-CH-lIf"/>
+                            <constraint firstItem="7c8-bL-ffe" firstAttribute="top" secondItem="pgw-Pp-nAm" secondAttribute="top" id="Sg9-FX-VGL"/>
+                            <constraint firstAttribute="trailing" secondItem="7c8-bL-ffe" secondAttribute="trailing" id="wBq-ig-Hxe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="pgw-Pp-nAm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WrT-zL-KxZ"/>
+                    <constraint firstItem="pgw-Pp-nAm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="aGw-QP-xd5"/>
+                    <constraint firstAttribute="trailing" secondItem="pgw-Pp-nAm" secondAttribute="trailing" id="fcO-A4-Ejz"/>
+                    <constraint firstAttribute="bottom" secondItem="pgw-Pp-nAm" secondAttribute="bottom" constant="8" id="hC7-N9-egZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="datePaymentLabel" destination="BSt-Ea-I82" id="sC3-IE-Xq3"/>
+                <outlet property="logoView" destination="68T-Ze-ZN7" id="4ba-qd-GEw"/>
+                <outlet property="mainView" destination="pgw-Pp-nAm" id="j3W-ec-B4l"/>
+                <outlet property="nominalPaymentLabel" destination="KWG-GW-iLG" id="vdl-ZA-0V3"/>
+                <outlet property="receivePaymentLabel" destination="YMJ-c3-tTJ" id="s9D-o1-IIu"/>
+                <outlet property="typePaymentLabel" destination="GTg-GC-wkI" id="Z0a-Ct-eQj"/>
+            </connections>
+            <point key="canvasLocation" x="36.641221374045799" y="77.464788732394368"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dollarsign.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <namedColor name="SubtitleColor">
+            <color red="0.56099998950958252" green="0.60799998044967651" blue="0.70200002193450928" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

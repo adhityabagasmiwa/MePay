@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-Bold.ttf">
+            <string>SofiaPro-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransactionPromoListViewController" customModule="Metrodata" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Mc5-II-6Ma" id="7gA-v3-kDG"/>
+                <outlet property="navigationTitleLabel" destination="eZn-GK-YsB" id="hA8-i5-8Hf"/>
+                <outlet property="promoSectionView" destination="cbP-Oh-Fip" id="qkT-pi-SeX"/>
+                <outlet property="searchBar" destination="kMJ-hQ-Szi" id="x3M-x7-DL2"/>
+                <outlet property="tableView" destination="fB1-RX-Bf6" id="OM5-Dq-bEg"/>
+                <outlet property="transactionSectionView" destination="080-WT-9Gh" id="G3U-Uj-3kk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNP-pY-OoZ" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sz9-T8-HQX" userLabel="Navigation View">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epq-Dm-qsq" userLabel="Back Button">
+                                    <rect key="frame" x="12.000000000000002" y="59.000000000000007" width="21.666666666666671" height="23.333333333333336"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" ">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="Ff9-68-akb"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Transactions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZn-GK-YsB">
+                                    <rect key="frame" x="113.00000000000001" y="57.999999999999993" width="167.33333333333337" height="25.666666666666664"/>
+                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="18"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="eZn-GK-YsB" firstAttribute="centerX" secondItem="Sz9-T8-HQX" secondAttribute="centerX" id="2fe-sU-RI8"/>
+                                <constraint firstItem="epq-Dm-qsq" firstAttribute="leading" secondItem="Sz9-T8-HQX" secondAttribute="leading" constant="12" id="b27-qC-VmL"/>
+                                <constraint firstAttribute="height" constant="90" id="dwW-vt-1YH"/>
+                                <constraint firstItem="eZn-GK-YsB" firstAttribute="centerY" secondItem="epq-Dm-qsq" secondAttribute="centerY" id="uRh-b7-X73"/>
+                            </constraints>
+                        </view>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search Recent Transaction" translatesAutoresizingMaskIntoConstraints="NO" id="kMJ-hQ-Szi">
+                            <rect key="frame" x="20" y="90" width="353" height="56"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="080-WT-9Gh" userLabel="Transaction Section View">
+                            <rect key="frame" x="0.0" y="162" width="393" height="656"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fB1-RX-Bf6">
+                                    <rect key="frame" x="20" y="0.0" width="353" height="656"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="fB1-RX-Bf6" secondAttribute="trailing" constant="20" id="90a-mU-ZyD"/>
+                                <constraint firstAttribute="bottom" secondItem="fB1-RX-Bf6" secondAttribute="bottom" id="IA9-IJ-bVi"/>
+                                <constraint firstItem="fB1-RX-Bf6" firstAttribute="leading" secondItem="080-WT-9Gh" secondAttribute="leading" constant="20" id="g3m-iM-Gfj"/>
+                                <constraint firstItem="fB1-RX-Bf6" firstAttribute="top" secondItem="080-WT-9Gh" secondAttribute="top" id="rQH-e1-CzI"/>
+                            </constraints>
+                        </view>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbP-Oh-Fip" userLabel="Promo Section View">
+                            <rect key="frame" x="0.0" y="162" width="393" height="656"/>
+                            <subviews>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Mc5-II-6Ma">
+                                    <rect key="frame" x="20" y="0.0" width="353" height="656"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="18Q-Ak-slj">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="Mc5-II-6Ma" secondAttribute="bottom" id="1Io-KI-kUp"/>
+                                <constraint firstItem="Mc5-II-6Ma" firstAttribute="leading" secondItem="cbP-Oh-Fip" secondAttribute="leading" constant="20" id="Eal-He-exT"/>
+                                <constraint firstItem="Mc5-II-6Ma" firstAttribute="top" secondItem="cbP-Oh-Fip" secondAttribute="top" id="K8T-pv-cc8"/>
+                                <constraint firstAttribute="trailing" secondItem="Mc5-II-6Ma" secondAttribute="trailing" constant="20" id="myi-aD-B9P"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="080-WT-9Gh" firstAttribute="leading" secondItem="oNP-pY-OoZ" secondAttribute="leading" id="3ta-e4-dAf"/>
+                        <constraint firstAttribute="trailing" secondItem="cbP-Oh-Fip" secondAttribute="trailing" id="HWe-pl-vMS"/>
+                        <constraint firstAttribute="trailing" secondItem="kMJ-hQ-Szi" secondAttribute="trailing" constant="20" id="Mht-N0-aOA"/>
+                        <constraint firstAttribute="bottom" secondItem="080-WT-9Gh" secondAttribute="bottom" id="Rsn-La-GsA"/>
+                        <constraint firstItem="kMJ-hQ-Szi" firstAttribute="top" secondItem="Sz9-T8-HQX" secondAttribute="bottom" id="Vf4-D4-x6m"/>
+                        <constraint firstItem="cbP-Oh-Fip" firstAttribute="top" secondItem="kMJ-hQ-Szi" secondAttribute="bottom" constant="16" id="dfB-3S-yFK"/>
+                        <constraint firstItem="cbP-Oh-Fip" firstAttribute="leading" secondItem="oNP-pY-OoZ" secondAttribute="leading" id="ewa-7I-zFU"/>
+                        <constraint firstAttribute="bottom" secondItem="cbP-Oh-Fip" secondAttribute="bottom" id="gs9-I3-Nce"/>
+                        <constraint firstAttribute="trailing" secondItem="Sz9-T8-HQX" secondAttribute="trailing" id="hWW-cy-2TH"/>
+                        <constraint firstItem="Sz9-T8-HQX" firstAttribute="top" secondItem="oNP-pY-OoZ" secondAttribute="top" id="iAW-Yd-V2I"/>
+                        <constraint firstAttribute="trailing" secondItem="080-WT-9Gh" secondAttribute="trailing" id="rm2-ro-YBc"/>
+                        <constraint firstItem="Sz9-T8-HQX" firstAttribute="leading" secondItem="oNP-pY-OoZ" secondAttribute="leading" id="szV-E5-ME3"/>
+                        <constraint firstItem="kMJ-hQ-Szi" firstAttribute="leading" secondItem="oNP-pY-OoZ" secondAttribute="leading" constant="20" id="tMU-A0-AOe"/>
+                        <constraint firstItem="080-WT-9Gh" firstAttribute="top" secondItem="kMJ-hQ-Szi" secondAttribute="bottom" constant="16" id="ttv-gh-JF9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oNP-pY-OoZ" secondAttribute="bottom" id="Bdd-dO-tJc"/>
+                <constraint firstItem="epq-Dm-qsq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="M1e-aY-PB8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oNP-pY-OoZ" secondAttribute="trailing" id="N6Y-rD-d6r"/>
+                <constraint firstItem="oNP-pY-OoZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hUL-Vr-uzN"/>
+                <constraint firstItem="oNP-pY-OoZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iVE-V2-LnF"/>
+            </constraints>
+            <point key="canvasLocation" x="2" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+    </resources>
+</document>

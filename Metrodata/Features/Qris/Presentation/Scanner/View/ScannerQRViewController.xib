@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-Bold.ttf">
+            <string>SofiaPro-Bold</string>
+        </array>
+        <array key="Sofia-Pro-Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerQRViewController" customModule="Metrodata" customModuleProvider="target">
+            <connections>
+                <outlet property="cameraBorder" destination="NmE-Hy-vM4" id="AWQ-PI-ml7"/>
+                <outlet property="cameraView" destination="GzS-hQ-Uyn" id="93M-6H-a35"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GzS-hQ-Uyn" userLabel="Camera View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKm-pb-M3u" userLabel="Background View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScannerImage" translatesAutoresizingMaskIntoConstraints="NO" id="NmE-Hy-vM4" userLabel="Camera Border">
+                    <rect key="frame" x="60.666666666666657" y="290" width="272" height="272"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="272" id="BQg-sy-z61"/>
+                        <constraint firstAttribute="width" constant="272" id="GM3-Hu-80d"/>
+                    </constraints>
+                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default" weight="ultraLight"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bji-2Z-r0m">
+                    <rect key="frame" x="70.666666666666686" y="300" width="252" height="252"/>
+                    <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="252" id="Y2n-Xo-gjU"/>
+                        <constraint firstAttribute="height" constant="252" id="tU2-Ti-KsU"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRISLogo" translatesAutoresizingMaskIntoConstraints="NO" id="B2t-3H-4a4">
+                    <rect key="frame" x="154.66666666666666" y="706" width="84" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="3Wb-hd-DEI"/>
+                        <constraint firstAttribute="height" constant="56" id="99d-gy-kFh"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qB-HH-xeZ" userLabel="Navigation View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTP-RY-Mxc" userLabel="Back Button">
+                            <rect key="frame" x="12.000000000000002" y="59.000000000000007" width="21.666666666666671" height="23.333333333333336"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" ">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="InD-Bh-hZf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QRIS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOQ-NO-WWo">
+                            <rect key="frame" x="175.66666666666666" y="57.999999999999993" width="41.666666666666657" height="25.666666666666664"/>
+                            <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FOQ-NO-WWo" firstAttribute="centerX" secondItem="1qB-HH-xeZ" secondAttribute="centerX" id="DRY-Q5-0zq"/>
+                        <constraint firstItem="FOQ-NO-WWo" firstAttribute="centerY" secondItem="UTP-RY-Mxc" secondAttribute="centerY" id="NVF-hg-ena"/>
+                        <constraint firstAttribute="height" constant="90" id="TRN-iU-hMA"/>
+                        <constraint firstItem="UTP-RY-Mxc" firstAttribute="leading" secondItem="1qB-HH-xeZ" secondAttribute="leading" constant="12" id="ayZ-RE-rrc"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point the camera at the QRIS code to make payment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryp-eI-NyS">
+                    <rect key="frame" x="48" y="138" width="297" height="43.666666666666657"/>
+                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Ryp-eI-NyS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="185-vb-jb4"/>
+                <constraint firstItem="bji-2Z-r0m" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="2Pu-Ac-Czr"/>
+                <constraint firstItem="GzS-hQ-Uyn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ABb-U5-9gC"/>
+                <constraint firstItem="Ryp-eI-NyS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="AyW-b3-Xa5"/>
+                <constraint firstItem="Ryp-eI-NyS" firstAttribute="top" secondItem="1qB-HH-xeZ" secondAttribute="bottom" constant="48" id="D2U-q1-1kS"/>
+                <constraint firstItem="1qB-HH-xeZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GaQ-bI-NEg"/>
+                <constraint firstItem="1qB-HH-xeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JOZ-9j-WT6"/>
+                <constraint firstItem="NmE-Hy-vM4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Kif-68-Wf7"/>
+                <constraint firstItem="bKm-pb-M3u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LAp-wU-d8f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ryp-eI-NyS" secondAttribute="trailing" constant="48" id="N5C-HB-Oxz"/>
+                <constraint firstItem="B2t-3H-4a4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UTo-Tt-UTV"/>
+                <constraint firstItem="NmE-Hy-vM4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VfQ-EV-wDb"/>
+                <constraint firstItem="GzS-hQ-Uyn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vk4-3e-kQQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GzS-hQ-Uyn" secondAttribute="trailing" id="aFt-dB-9W2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="B2t-3H-4a4" secondAttribute="bottom" constant="56" id="aTa-c1-Udr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bKm-pb-M3u" secondAttribute="trailing" id="cos-vF-E9U"/>
+                <constraint firstAttribute="bottom" secondItem="GzS-hQ-Uyn" secondAttribute="bottom" id="h6J-Zv-ans"/>
+                <constraint firstItem="bji-2Z-r0m" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jHf-ZS-vNH"/>
+                <constraint firstAttribute="bottom" secondItem="bKm-pb-M3u" secondAttribute="bottom" id="n1U-28-EBv"/>
+                <constraint firstItem="bKm-pb-M3u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="q7E-Yb-36U"/>
+                <constraint firstItem="UTP-RY-Mxc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="u0C-o8-L4j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1qB-HH-xeZ" secondAttribute="trailing" id="zbc-8g-8he"/>
+            </constraints>
+            <point key="canvasLocation" x="49.618320610687022" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="QRISLogo" width="828" height="301.33334350585938"/>
+        <image name="ScannerImage" width="299" height="299"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

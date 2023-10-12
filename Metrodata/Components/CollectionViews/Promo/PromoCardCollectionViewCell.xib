@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-SemiBold.ttf">
+            <string>SofiaPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PromoCardCollectionViewCell" customModule="Metrodata" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="232"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="232"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djS-G6-l3Q" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="232"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardBackground" translatesAutoresizingMaskIntoConstraints="NO" id="exR-qx-iWH" userLabel="Image View">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="180"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="mEG-mg-GEl"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9dA-8C-SZr">
+                                <rect key="frame" x="20" y="196" width="260" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXu-a9-IMZ" userLabel="TItle Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="20"/>
+                                        <fontDescription key="fontDescription" name="SofiaPro-SemiBold" family="Sofia Pro" pointSize="14"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9dA-8C-SZr" secondAttribute="bottom" constant="16" id="3P5-ka-NQi"/>
+                            <constraint firstAttribute="trailing" secondItem="exR-qx-iWH" secondAttribute="trailing" id="XM7-gd-MOV"/>
+                            <constraint firstItem="9dA-8C-SZr" firstAttribute="top" secondItem="exR-qx-iWH" secondAttribute="bottom" constant="16" id="XoX-zV-6dW"/>
+                            <constraint firstItem="9dA-8C-SZr" firstAttribute="leading" secondItem="djS-G6-l3Q" secondAttribute="leading" constant="20" id="e6Q-M2-L2d"/>
+                            <constraint firstItem="exR-qx-iWH" firstAttribute="top" secondItem="djS-G6-l3Q" secondAttribute="top" id="jvi-Yb-5vc"/>
+                            <constraint firstItem="exR-qx-iWH" firstAttribute="leading" secondItem="djS-G6-l3Q" secondAttribute="leading" id="unC-Df-gUk"/>
+                            <constraint firstAttribute="trailing" secondItem="9dA-8C-SZr" secondAttribute="trailing" constant="20" id="vhh-AL-A5J"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="djS-G6-l3Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AZ7-wm-vLw"/>
+                <constraint firstItem="djS-G6-l3Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dTs-K9-0ZW"/>
+                <constraint firstAttribute="trailing" secondItem="djS-G6-l3Q" secondAttribute="trailing" id="dgy-RJ-orh"/>
+                <constraint firstAttribute="bottom" secondItem="djS-G6-l3Q" secondAttribute="bottom" id="w2S-Ua-b4U"/>
+            </constraints>
+            <size key="customSize" width="300" height="232"/>
+            <connections>
+                <outlet property="mainView" destination="djS-G6-l3Q" id="v3t-9B-m9e"/>
+                <outlet property="promoImageView" destination="exR-qx-iWH" id="Kjb-mB-OhI"/>
+                <outlet property="promoTitleLabel" destination="CXu-a9-IMZ" id="lwc-QT-TGa"/>
+            </connections>
+            <point key="canvasLocation" x="265.64885496183206" y="66.901408450704224"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CardBackground" width="369" height="228"/>
+        <namedColor name="AccentColor">
+            <color red="0.27099999785423279" green="0.4309999942779541" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

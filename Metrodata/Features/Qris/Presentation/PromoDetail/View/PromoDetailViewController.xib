@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia-Pro-Bold.ttf">
+            <string>SofiaPro-Bold</string>
+        </array>
+        <array key="Sofia-Pro-Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PromoDetailViewController" customModule="Metrodata" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundImageView" destination="l9i-NG-XIl" id="ecl-do-0lp"/>
+                <outlet property="descriptionLabel" destination="hng-4l-HqP" id="nWb-ft-6Cj"/>
+                <outlet property="titleLabel" destination="oDf-lj-Yue" id="e8e-Lj-Tuc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cFa-0k-8Xw" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B52-OC-BDv" userLabel="Navigation View">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LrA-HY-OyN" userLabel="Back Button">
+                                    <rect key="frame" x="12.000000000000002" y="59.000000000000007" width="21.666666666666671" height="23.333333333333336"/>
+                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title=" ">
+                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                        <directionalEdgeInsets key="contentInsets" top="0.0" leading="0.0" bottom="0.0" trailing="0.0"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="onPressBackButton:" destination="-1" eventType="touchUpInside" id="AKn-mn-EGt"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Promo Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6N-fi-pIe">
+                                    <rect key="frame" x="142.66666666666666" y="57.999999999999993" width="108" height="25.666666666666664"/>
+                                    <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="18"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="m6N-fi-pIe" firstAttribute="centerX" secondItem="B52-OC-BDv" secondAttribute="centerX" id="0d2-ff-M9x"/>
+                                <constraint firstAttribute="height" constant="90" id="8eF-NZ-dWk"/>
+                                <constraint firstItem="m6N-fi-pIe" firstAttribute="centerY" secondItem="LrA-HY-OyN" secondAttribute="centerY" id="nHR-ep-8cb"/>
+                                <constraint firstItem="LrA-HY-OyN" firstAttribute="leading" secondItem="B52-OC-BDv" secondAttribute="leading" constant="12" id="wH4-SC-dhn"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-ja-FDN">
+                            <rect key="frame" x="0.0" y="90" width="393" height="728"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CardBackground" translatesAutoresizingMaskIntoConstraints="NO" id="l9i-NG-XIl">
+                                    <rect key="frame" x="0.0" y="8" width="393" height="280"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="280" id="T7Z-JB-OSc"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FiD-OF-TSL" userLabel="Content View">
+                                    <rect key="frame" x="0.0" y="288" width="393" height="440"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDf-lj-Yue">
+                                            <rect key="frame" x="19.999999999999996" y="16" width="45.666666666666657" height="25.666666666666671"/>
+                                            <fontDescription key="fontDescription" name="SofiaPro-Bold" family="Sofia Pro" pointSize="18"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hng-4l-HqP">
+                                            <rect key="frame" x="20" y="57.666666666666693" width="353" height="19.333333333333336"/>
+                                            <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="14"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="hng-4l-HqP" secondAttribute="trailing" constant="20" id="ASx-U0-v3M"/>
+                                        <constraint firstItem="oDf-lj-Yue" firstAttribute="top" secondItem="FiD-OF-TSL" secondAttribute="top" constant="16" id="IQ2-oA-Ofe"/>
+                                        <constraint firstItem="hng-4l-HqP" firstAttribute="top" secondItem="oDf-lj-Yue" secondAttribute="bottom" constant="16" id="OQg-VA-g1L"/>
+                                        <constraint firstItem="oDf-lj-Yue" firstAttribute="leading" secondItem="FiD-OF-TSL" secondAttribute="leading" constant="20" id="RMK-39-Rv9"/>
+                                        <constraint firstItem="hng-4l-HqP" firstAttribute="leading" secondItem="FiD-OF-TSL" secondAttribute="leading" constant="20" id="a8e-i6-JE3"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="0.0" trailing="0.0"/>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="B52-OC-BDv" firstAttribute="leading" secondItem="cFa-0k-8Xw" secondAttribute="leading" id="3SI-Bi-DWP"/>
+                        <constraint firstAttribute="trailing" secondItem="B52-OC-BDv" secondAttribute="trailing" id="5J1-AB-EXt"/>
+                        <constraint firstAttribute="trailing" secondItem="QeL-ja-FDN" secondAttribute="trailing" id="KRe-YI-MQQ"/>
+                        <constraint firstItem="QeL-ja-FDN" firstAttribute="top" secondItem="B52-OC-BDv" secondAttribute="bottom" id="RyT-ym-0rM"/>
+                        <constraint firstAttribute="bottom" secondItem="QeL-ja-FDN" secondAttribute="bottom" id="jCf-Ma-WTX"/>
+                        <constraint firstItem="QeL-ja-FDN" firstAttribute="leading" secondItem="cFa-0k-8Xw" secondAttribute="leading" id="jt7-FD-a4G"/>
+                        <constraint firstItem="B52-OC-BDv" firstAttribute="top" secondItem="cFa-0k-8Xw" secondAttribute="top" id="v2F-nV-Tek"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="LrA-HY-OyN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0Yh-sz-hYB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cFa-0k-8Xw" secondAttribute="bottom" id="Ake-I7-ark"/>
+                <constraint firstItem="cFa-0k-8Xw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="CcL-kV-vfA"/>
+                <constraint firstItem="cFa-0k-8Xw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oNp-oW-j5y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cFa-0k-8Xw" secondAttribute="trailing" id="u0t-lT-nXY"/>
+            </constraints>
+            <point key="canvasLocation" x="6" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CardBackground" width="369" height="228"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

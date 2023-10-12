@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3C6-wg-VKa" userLabel="Image Background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MePayLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Wom-z1-IuU" userLabel="Image Logo">
+                                <rect key="frame" x="130.66666666666666" y="360" width="131.99999999999997" height="132"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="132" id="9PQ-5M-CEd"/>
+                                    <constraint firstAttribute="height" constant="132" id="YZ3-es-SWK"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3C6-wg-VKa" secondAttribute="bottom" id="75E-IX-g1D"/>
+                            <constraint firstItem="3C6-wg-VKa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hph-FV-Xhm"/>
+                            <constraint firstItem="3C6-wg-VKa" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="J3B-NA-Lp5"/>
+                            <constraint firstItem="Wom-z1-IuU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Jnh-u8-ntt"/>
+                            <constraint firstItem="Wom-z1-IuU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="V6s-fy-UPZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3C6-wg-VKa" secondAttribute="trailing" id="f0B-Pt-10K"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MePayLogo" width="170" height="63"/>
+        <image name="SplashScreenBackground" width="428" height="926"/>
+        <namedColor name="AccentColor">
+            <color red="0.27099999785423279" green="0.4309999942779541" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
