@@ -72,6 +72,28 @@ class FirestoreService {
         }
     }
     
+    func createNewBalance(uid: String, completion: @escaping (Bool, Error?) -> Void) {
+        let timestamp = Timestamp(date: Date())
+        let cardNumber = "CN\(Date().toString(format: "ddyyyyhmma"))"
+        
+        let requestNewBalances: [String: Any] = [
+            "card_number": cardNumber,
+            "created_at": timestamp,
+            "updated_at": timestamp,
+            "nominal": 0
+        ] as [String : Any]
+        
+        FirestoreManager.referenceForBalance(uid: uid).setData(requestNewBalances) { error in
+            if let error = error {
+                completion(false, error)
+                
+                return
+            }
+            
+            completion(true, nil)
+        }
+    }
+    
     func fetchBalance(completion: @escaping (Balance?, Error?) -> Void) {
         let uid = FirebaseAuthService.shared.getUserId()
         

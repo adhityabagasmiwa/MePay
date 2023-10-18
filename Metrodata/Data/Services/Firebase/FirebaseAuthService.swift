@@ -20,7 +20,7 @@ class FirebaseAuthService {
         let password = userRegisterRequest.password
         
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let _eror = error {
+            if let error = error {
                 completion(false, error)
                 
                 return
@@ -28,7 +28,7 @@ class FirebaseAuthService {
             
             if let result = result {
                 let request = UserRegisterRequest(fullName: fullName, email: email, password: password)
-                FirestoreService.shared.createUser(with: request, uid: result.user.uid, completion: { result, error in
+                FirestoreService.shared.createUser(with: request, uid: result.user.uid, completion: { _, error in
                     if let error = error {
                         completion(false, error)
                         
@@ -36,14 +36,22 @@ class FirebaseAuthService {
                     }
                     
                     let request = UserLoginRequest(email: email, password: password)
-                    self.loginUser(with: request, completion: { result, error in
+                    self.loginUser(with: request, completion: { _, error in
                         if let error = error {
                             completion(false, error)
                             
                             return
                         }
                         
-                        completion(true, nil)
+                        FirestoreService.shared.createNewBalance(uid: result.user.uid, completion: { result, error in
+                            if let error = error {
+                                completion(false, error)
+                                
+                                return
+                            }
+                            
+                            completion(true, nil)
+                        })
                     })
                 })
             }
